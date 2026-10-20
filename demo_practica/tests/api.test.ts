@@ -4,7 +4,7 @@ import { app } from '../src/app.ts';
 
 describe('API de precios', () => {
   it('responde al chequeo de salud', async () => {
-    const respuesta = await request(app).get('/salud');
+    const respuesta = await request(app).get('/healthy');
     expect(respuesta.status).toBe(200);
     expect(respuesta.body).toEqual({ estado: 'ok' });
   });
